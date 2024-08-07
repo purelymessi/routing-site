@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom';
 const ProductCard = ({ product }) => {
   return (
     <div className="border p-4 rounded-lg shadow-sm bg-white">
-      <img src={product.image} alt={product.title} className="w-full h-64 object-cover mb-4 rounded" />
+      <div className='h-64 w-full'>
+        <img src={product.image} alt={product.title} className="w-full h-full object-contain mb-4 rounded" />
+      </div>
       <h2 className="text-lg font-semibold">{product.title}</h2>
       <p className="text-gray-600 text-sm mb-2">{product.category}</p>
       <p className="text-sm text-gray-700 mb-4">{product.description}</p>
